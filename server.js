@@ -11,6 +11,7 @@ app.use(express.json({extended: false}))
 // })
 
 app.use('/applications', require('./routes/apps'))
+app.use('/interviews', require('./routes/interviews'))
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=> console.log(`Listening on port: ${PORT}`))

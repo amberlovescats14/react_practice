@@ -1,4 +1,4 @@
-const mongoose = require('monogoose')
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const InterviewSchema = new Schema({
@@ -19,9 +19,13 @@ const InterviewSchema = new Schema({
     required: true,
     min: 1
   },
-  date : {
+  dayofinterview : {
     type: String,
     required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 })
 
