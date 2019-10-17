@@ -6,9 +6,11 @@ const app = express()
 connectDB()
 app.use(express.json({extended: false}))
 
-app.get('/', (req, res) => {
-  res.send(`API running...`)
-})
+// app.get('/', (req, res) => {
+//   res.send(`API running...`)
+// })
+
+app.use('/applications', require('./routes/apps'))
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=> console.log(`Listening on port: ${PORT}`))
